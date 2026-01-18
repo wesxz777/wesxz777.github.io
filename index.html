@@ -203,6 +203,13 @@
             border-bottom: 2px solid #2563eb;
         }
 
+        /* Grid container for Education and Skills */
+        .education-skills-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
         /* Responsive Design for Mobile */
         @media (max-width: 768px) {
             .container {
@@ -230,10 +237,10 @@
                 justify-content: center;
             }
 
-            /* Make Education and Skills stack vertically on mobile */
-            [style*="grid-template-columns: 1fr 1fr"] {
-                grid-template-columns: 1fr !important;
-                gap: 20px !important;
+            /* Stack Education and Skills vertically on mobile */
+            .education-skills-wrapper {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
 
             .section-column {
@@ -245,8 +252,8 @@
             }
 
             .skills-grid {
-                grid-template-columns: 1fr !important;
-                gap: 15px !important;
+                grid-template-columns: 1fr;
+                gap: 15px;
             }
 
             .skill-box {
@@ -303,7 +310,7 @@
 </div>
 <!-- Education and Skills -->
 <div class="container container-3">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+    <div class="education-skills-wrapper">
         <!-- Education Column -->
         <div class="section-column">
             <h1>Education</h1>
@@ -340,9 +347,6 @@
                 </div>
             </div>
         </div>
-
-
-
     </div>
 </div>
 </body>

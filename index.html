@@ -2,32 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>I love Computer Programming</title>
     
     <!--Container-->
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             background-color: #1B1B1B;
             margin: 0;
             padding: 20px 0;
+            width: 100%;
+            overflow-x: hidden;
         }
 
         .container {
             width: 100%;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 100%;
+            margin: 0 auto;
             padding: 30px 15px;
             box-sizing: border-box;
             margin-bottom: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
         .container-1 {
             background-color: #0d0f12;
-          
         }
 
         .container-2 {
@@ -44,6 +56,8 @@
         h1, h2 {
             color: #ffffff;
             font-family: Arial, 'sans-serif';
+            max-width: 100%;
+            word-break: break-word;
         }
 
         p {
@@ -52,6 +66,7 @@
             line-height: 1.6;
             word-wrap: break-word;
             overflow-wrap: break-word;
+            word-break: break-word;
         }
 
         textarea {
@@ -87,6 +102,7 @@
             align-items: flex-start;
             width: 100%;
             box-sizing: border-box;
+            overflow: hidden;
         }
 
         .image-text-wrapper img {
@@ -107,6 +123,7 @@
             flex-direction: column;
             width: 100%;
             box-sizing: border-box;
+            min-width: 0;
         }
 
         .text-content h1,
@@ -128,7 +145,7 @@
         display: flex;
         align-items: center;
         width: calc(50% - 20px);
-        min-width: 150px;
+        min-width: 120px;
         box-sizing: border-box;
         word-wrap: break-word;
         }
@@ -176,8 +193,6 @@
             margin: 5px 5px 5px 0;
             font-family: Verdana, 'sans-serif';
             white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .education-item {
@@ -234,20 +249,9 @@
 
         /* Mobile and Embedded Browser Override */
         @media (max-width: 900px) {
-            * {
-                box-sizing: border-box;
-            }
-
-            html, body {
-                width: 100vw;
-                overflow-x: hidden;
-            }
-
             .container {
-                padding: 15px;
-                margin-bottom: 15px;
-                width: 100%;
-                max-width: 100%;
+                padding: 12px 10px;
+                margin-bottom: 12px;
             }
 
             .image-text-wrapper {
@@ -257,8 +261,8 @@
             }
 
             .image-text-wrapper img {
-                width: 100px;
-                height: 100px;
+                width: 80px;
+                height: 80px;
             }
 
             .text-content p {
@@ -269,64 +273,66 @@
                 width: 100%;
                 justify-content: center;
                 min-width: auto;
+                margin: 5px 0;
             }
 
             .education-skills-wrapper {
                 grid-template-columns: 1fr;
-                gap: 15px;
-                width: 100%;
+                gap: 12px;
             }
 
             .section-column {
-                padding: 15px;
-                width: 100%;
+                padding: 12px;
             }
 
             .section-column h1 {
-                font-size: 16px;
-                margin-bottom: 15px;
+                font-size: 14px;
+                margin-bottom: 10px;
+                padding-bottom: 8px;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
-                width: 100%;
+                gap: 10px;
             }
 
             .skill-box {
-                padding: 12px;
-                width: 100%;
+                padding: 10px;
             }
 
             .skill-box h2 {
-                font-size: 13px;
-                margin: 0 0 10px 0;
+                font-size: 12px;
+                margin: 0 0 8px 0;
             }
 
             .skill-tag {
-                font-size: 11px;
-                padding: 4px 8px;
-                margin: 3px 3px 3px 0;
+                font-size: 10px;
+                padding: 3px 6px;
+                margin: 2px 2px 2px 0;
             }
 
             .education-item {
-                margin-bottom: 15px;
+                margin-bottom: 12px;
             }
 
             .education-item h3 {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .education-item .school {
-                font-size: 12px;
+                font-size: 11px;
             }
 
             .education-item .year {
-                font-size: 11px;
+                font-size: 10px;
             }
 
             .education-item .details {
-                font-size: 11px;
+                font-size: 10px;
+            }
+
+            h1, h2 {
+                font-size: 14px;
             }
         }
     </style>

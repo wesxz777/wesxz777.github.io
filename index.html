@@ -202,6 +202,66 @@
             padding-bottom: 15px;
             border-bottom: 2px solid #2563eb;
         }
+
+        /* Responsive Design for Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 10px;
+                margin-bottom: 20px;
+            }
+
+            .image-text-wrapper {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .image-text-wrapper img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .text-content p {
+                max-width: 100%;
+            }
+
+            .contact-item {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Make Education and Skills stack vertically on mobile */
+            [style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 20px !important;
+            }
+
+            .section-column {
+                padding: 20px;
+            }
+
+            .section-column h1 {
+                font-size: 18px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr !important;
+                gap: 15px !important;
+            }
+
+            .skill-box {
+                padding: 15px;
+            }
+
+            .skill-box h2 {
+                font-size: 14px;
+            }
+
+            .skill-tag {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
     </style>
     
 </head>
@@ -268,13 +328,12 @@
                 <div class="skill-box">
                     <h2>📦 Frontend</h2>
                     <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">HTML</span>
+                    <span class="skill-tag">HTML5</span>
                     <span class="skill-tag">JavaScript</span>
                 </div>
                 <div class="skill-box">
-                    <h2>💻 Programming</h2>
+                    <h2>💻 Backend</h2>
                     <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">Python</span>
                     <span class="skill-tag">Java</span>
                     <span class="skill-tag">C++</span>
                     <span class="skill-tag">MySQL</span>
@@ -287,5 +346,4 @@
     </div>
 </div>
 </body>
-
 </html> 
